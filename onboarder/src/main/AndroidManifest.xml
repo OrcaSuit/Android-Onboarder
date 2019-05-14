@@ -1,1 +1,3 @@
 <manifest package="com.cuneytayyildiz.onboarder"/>
+
+<!--왜 이거만 있지? IntroActivity와 같은 패키지-->

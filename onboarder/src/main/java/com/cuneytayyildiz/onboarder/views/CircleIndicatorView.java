@@ -10,7 +10,7 @@ import android.view.View;
 
 import com.cuneytayyildiz.onboarder.R;
 
-
+//인디케이터, (ball count) 원형 리스트
 public class CircleIndicatorView extends View {
 
     private Context context;

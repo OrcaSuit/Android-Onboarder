@@ -9,6 +9,8 @@ import androidx.annotation.ColorRes;
 import androidx.annotation.DrawableRes;
 import androidx.annotation.StringRes;
 
+
+//페이지의 속성값들을 모아놓은 클래스
 public class OnboarderPage {
 
     private String title;
@@ -38,7 +40,10 @@ public class OnboarderPage {
     private int textPaddingBottomPx = 0;
     private boolean multilineDescriptionCentered;
 
-
+    //빌더 클래스 https://www.feelteller.com/10
+    /*
+    클래스 생성자의 인자가 많을때 보기좋게 혹은 사용하기 좋게끔 생성자의 형태를 새롭게 바꾼 패턴
+     */
     private OnboarderPage(Builder builder) {
         title = builder.title;
         description = builder.description;

@@ -143,6 +143,7 @@ public abstract class OnboarderActivity extends AppCompatActivity implements Vie
         }
     }
 
+    //현재 페이지
     @Override
     public void onPageSelected(int position) {
         int lastPagePosition = onboarderAdapter.getCount() - 1;
@@ -199,8 +200,8 @@ public abstract class OnboarderActivity extends AppCompatActivity implements Vie
             this.setDividerVisibility(View.GONE);
             this.shouldDarkenButtonsLayout(false);
             this.btnFinish.setVisibility(View.GONE);
-            this.btnSkip.setVisibility(View.GONE);
-            this.btnNext.setVisibility(View.GONE);
+            this.btnSkip.setVisibility(View.GONE); //페이지 스킵 맨끝으로 ~
+            this.btnNext.setVisibility(View.GONE); //다음 페이지로.
             this.btnNext.setFocusable(false);
             this.buttonsLayout.getLayoutParams().height =
                     (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 96,

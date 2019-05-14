@@ -8,6 +8,7 @@ import com.cuneytayyildiz.onboarder.OnboarderPage;
 import java.util.ArrayList;
 import java.util.List;
 
+//배경컬러 ?
 public class ColorsArrayBuilder {
 
     public static Integer[] getPageBackgroundColors(Context context, List<OnboarderPage> pages) {

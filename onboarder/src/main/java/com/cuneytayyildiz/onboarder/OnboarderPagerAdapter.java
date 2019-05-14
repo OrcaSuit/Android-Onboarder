@@ -15,6 +15,16 @@ import android.widget.TextView;
 
 import java.util.List;
 
+//PagerAdapter는 abstract 키워드로 정의된 추상 클래스이므로 OnboarderPagerAdapter로 상속받아서 씀
+//데이터 리소스를 뷰페이저의 페이지뷰를 생성하는데 사용되는 클래스.
+
+//오버라이드 해야하는 메서드
+/*      instantiateItem(ViewGroup container, int position)	            position에 해당하는 페이지 생성.
+        destroyItem(ViewGroup container, int position, Object object)	position 위치의 페이지 제거.
+        getCount()	                                                    사용 가능한 뷰의 갯수를 리턴.
+        isViewFromObject(View view, Object object)	                    페이지뷰가 특정 키 객체(key object)와 연관되는지 여부.*/
+
+//참조 : https://recipes4dev.tistory.com/148
 
 public class OnboarderPagerAdapter extends PagerAdapter {
     private Context context;
@@ -25,16 +35,20 @@ public class OnboarderPagerAdapter extends PagerAdapter {
         this.onboarderPages = onboarderPages;
     }
 
+    //getCount()	사용 가능한 뷰의 갯수를 리턴
     @Override
     public int getCount() {
         return onboarderPages.size();
     }
 
+    //isViewFromObject(View view, Object object) 페이지뷰가 특정 키(key object) 객체와 연관되는지 여부
     @Override
     public boolean isViewFromObject(@NonNull View view, @NonNull Object object) {
         return view == object;
     }
 
+
+    //instantiateItem(ViewGroup container, int position) position에 해당하는 페이지 생성
     @NonNull
     @Override
     public Object instantiateItem(@NonNull ViewGroup container, int position) {
@@ -111,6 +125,7 @@ public class OnboarderPagerAdapter extends PagerAdapter {
         return itemView;
     }
 
+    //destroyItem(ViewGroup container, int position, Object object) position 위치의 페이지 제거
     @Override
     public void destroyItem(@NonNull ViewGroup container, int position, @NonNull Object object) {
         container.removeView((View) object);

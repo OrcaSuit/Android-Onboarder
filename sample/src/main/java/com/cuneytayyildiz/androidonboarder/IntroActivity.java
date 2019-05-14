@@ -140,6 +140,7 @@ public class IntroActivity extends OnboarderActivity implements OnboarderPageCha
         initOnboardingPages(pages);
     }
 
+    // 버튼 클릭 시 토스트 띄우기
     @Override
     public void onSkipButtonPressed() {
         super.onSkipButtonPressed();
