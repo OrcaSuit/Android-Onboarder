@@ -1,13 +1,17 @@
+//패키지 이름
 package com.cuneytayyildiz.androidonboarder;
 
+//안드로이드 라이브러리
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.Toast;
 
-import com.cuneytayyildiz.onboarder.OnboarderActivity;
-import com.cuneytayyildiz.onboarder.OnboarderPage;
-import com.cuneytayyildiz.onboarder.utils.OnboarderPageChangeListener;
+//직접 만든 라이브러리
+import com.cuneytayyildiz.onboarder.OnboarderActivity;              //페이지 기능 구현
+import com.cuneytayyildiz.onboarder.OnboarderPage;                  //페이지가 가지는 내용
+import com.cuneytayyildiz.onboarder.utils.OnboarderPageChangeListener; //페이지의 위치정보
 
+//자바 라이브러리
 import java.util.Arrays;
 import java.util.List;
 

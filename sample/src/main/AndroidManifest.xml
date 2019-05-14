@@ -10,8 +10,8 @@
 
         <activity android:name=".IntroActivity">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
+                <action android:name="android.intent.action.MAIN" /> //액티비티 시작
+                <category android:name="android.intent.category.LAUNCHER" /> //서비스 시작
             </intent-filter>
         </activity>
 
